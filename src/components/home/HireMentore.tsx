@@ -18,7 +18,7 @@ const HireMentorSection = () => {
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Post a Task</h3>
             <p className="text-gray-600 mb-6">Describe your project, set a budget, and find the perfect mentor or professional to complete it.</p>
             <Link to="/post-task">
-              <Button customClass="bg-blue-500 text-white px-6 py-3 rounded-lg">Get Started</Button>
+              <Button customClass="text-green-500 border border-green-500 hover:bg-green-500 hover:text-white px-6 py-3 rounded-lg">Get Started</Button>
             </Link>
           </div>
 
@@ -26,14 +26,14 @@ const HireMentorSection = () => {
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Become a Mentor</h3>
             <p className="text-gray-600 mb-6">Join our platform as a mentor and start earning by helping clients achieve their goals.</p>
             <Link to="/become-mentor">
-              <Button customClass="bg-green-500 text-white px-6 py-3 rounded-lg">Join as a Mentor</Button>
+              <Button customClass="bg-green-500 text-white px-6 py-3 rounded-lg hover:text-green-500 border hover:bg-white hover:border-green-500">Join as a Mentor</Button>
             </Link>
           </div>
         </div>
 
-        <div className="bg-slate-200 p-8 rounded-lg shadow-lg">
+        <div className="border border-green-500 p-8 rounded-lg shadow-lg">
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">How It Works</h3>
-          <ul className="list-disc list-inside text-gray-600 text-left mx-auto sm:w-[70%]">
+          <ul className="list-disc list-inside text-gray-700 text-left mx-auto sm:w-[70%]">
             <li className="mb-2">Clients post tasks with clear descriptions, budgets, and deadlines.</li>
             <li className="mb-2">Mentors and professionals apply for tasks or get assigned by an admin.</li>
             <li className="mb-2">Clients pay securely, and the payment is held until task completion.</li>
