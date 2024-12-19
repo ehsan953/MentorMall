@@ -57,20 +57,20 @@ export default function WhatWeOffer() {
             <div className="flex justify-center">
             <div className="basis-[90%] sm:basis-[100%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                 {programs.slice(0, 6).map((program) => (
-                <div key={program.id} className="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <div key={program.id} className="bg-gray-100 p-6 rounded-lg shadow-lg border border-green-500">
                     <div className="h-32 w-32 mx-auto bg-slate-300 rounded-full flex items-center justify-center mb-6">
                     <span className="text-white text-3xl">{program.icon}</span>
                     </div>
                     <h3 className="text-xl font-semibold text-gray-800">{program.name}</h3>
                     <p className="text-gray-600 mt-4">{program.description}</p>
-                    <a href={program.link} className="mt-4 inline-block text-blue-500 hover:text-blue-700">Learn More</a>
+                    {/* <Button customClass="mt-6 border border-green-500 text-green-500 px-6 py-3 rounded-lg">Learn More</Button> */}
                 </div>
                 ))}
             </div>
             </div>
 
             <Link to="/programs" className="block px-4 py-2">
-                <Button customClass="mt-6 bg-blue-500 text-white px-6 py-3 rounded-lg">View All Programs</Button>
+                <Button customClass="mt-6 bg-green-500 text-white px-6 py-3 rounded-lg">View All Programs</Button>
             </Link>
         </div>
     </section>

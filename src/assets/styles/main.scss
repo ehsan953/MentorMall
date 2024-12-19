@@ -84,3 +84,13 @@ body {
   opacity: 1;
   transition: 0s;
 }
+.custom-swiper .swiper-pagination-bullet {
+  background-color: #d1d5db; /* Default gray color */
+  transition: background-color 0.3s ease;
+  border: 2px solid black;
+}
+
+.custom-swiper .swiper-pagination-bullet-active {
+  background-color: #10b981; /* Green color for active dot */
+  border: none;
+}

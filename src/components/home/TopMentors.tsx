@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Button from '../common/Button';
 const mentors = [
   {
     id: 1,
@@ -45,7 +45,8 @@ export default function TopMentors() {
                 <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-800">{mentor.name}</h3>
                     <p className="text-gray-500 mt-2">{mentor.role}</p>
-                    <a href={mentor.link} className="mt-4 inline-block text-blue-500 hover:text-blue-700">Learn More</a>
+                    <Button customClass="mt-6 bg-green-500 text-white px-6 py-3 rounded-lg">Learn More</Button>
+                    {/* <a href={mentor.link} className="mt-4 inline-block text-blue-500 hover:text-blue-700">Learn More</a> */}
                 </div>
                 </div>
             ))}

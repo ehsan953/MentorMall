@@ -1,5 +1,6 @@
-import React from "react";
-import Button from '../../components/common/Button';
+import React, { useState } from 'react';
+import Button from '../common/Button';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 const programs = [
   {
     id: 1,
@@ -292,11 +293,32 @@ const programs = [
     link: "#public-relations",
   },
 ];
+
 export default function AllPrograms() {
+  const [isGrid, setIsGrid] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const programsPerPage = 10;
+
+  // Calculate the index of the first and last program for the current page
+  const indexOfLastProgram = currentPage * programsPerPage;
+  const indexOfFirstProgram = indexOfLastProgram - programsPerPage;
+
+  // Get the current programs to display based on pagination
+  const currentPrograms = programs.slice(indexOfFirstProgram, indexOfLastProgram);
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(programs.length / programsPerPage);
+
+  // Handle page change
+  const handlePageChange = (pageNumber: any) => {
+    setCurrentPage(pageNumber);
+  };
+
+
   return (
-    <section className="max-w-[1400px] mx-auto bg-white py-12 px-8 md:p-16">
+    <section className="p-8">
       <div className="max-w-[1400px] mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">
+       <h2 className="text-3xl font-bold text-gray-900 mb-8">
           Discover Expertise Through Mentorship
         </h2>
         <p className="md:w-[70%] mx-auto text-lg text-gray-600 mb-12">
@@ -307,34 +329,99 @@ export default function AllPrograms() {
           platform for growth and collaboration. Join us to unlock potential,
           bridge knowledge gaps, and foster impactful learning experiences.
         </p>
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold">All Programs</h2>
+        <div className="flex items-center space-x-4">
+          <button
+            onClick={() => setIsGrid(true)}
+            className={`p-2 border rounded ${
+              isGrid ? 'bg-green-500 text-white' : 'bg-white text-gray-800'
+            }`}
+          >
+            Grid View
+          </button>
+          <button
+            onClick={() => setIsGrid(false)}
+            className={`p-2 border rounded ${
+              !isGrid ? 'bg-green-500 text-white' : 'bg-white text-gray-800'
+            }`}
+          >
+            List View
+          </button>
+        </div>
+      </div>
 
-        <div className="flex justify-center">
+      <div className='flex justify-center'>
+        {isGrid ? (
           <div className="basis-[90%] sm:basis-[100%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 sm:gap-8">
-            {programs.map((program) => (
+            {currentPrograms.map((program) => (
               <div
                 key={program.id}
-                className="bg-gray-100 p-6 rounded-lg shadow-lg"
+                className="p-4 border rounded shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="h-32 w-32 mx-auto bg-slate-300 rounded-full flex items-center justify-center mb-6">
-                  <span className="text-white text-3xl">{program.icon}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800">
+                <div className="text-4xl mb-4 text-green-500">{program.icon}</div>
+                <h3 className="text-lg font-bold text-gray-800 mb-2">
                   {program.name}
                 </h3>
-                <p className="text-gray-600 mt-4">{program.description}</p>
-                <div className="flex flex-wrap justify-center gap-2 mt-6">
-                  <Button customClass="text-center basis-[98%] md:basis-[48%] lg:basis-[40%] bg-slate-300 text-black py-3 rounded-lg">Learn</Button>
-                  <Button customClass="text-center basis-[98%] md:basis-[48%] lg:basis-[55%] bg-slate-300 text-black py-3 rounded-lg">Mentorship</Button>
-                </div>
-                {/* <a
+                <p className="text-gray-600 mb-4">{program.description}</p>
+                <a
                   href={program.link}
-                  className="mt-4 inline-block text-blue-500 hover:text-blue-700"
+                  className="text-green-500 hover:underline font-medium"
                 >
-                  Take Course
-                </a> */}
+                  Learn More
+                </a>
               </div>
             ))}
           </div>
+        ) : (
+          <ul className="basis-[90%] sm:basis-[100%] divide-y divide-gray-200">
+            {currentPrograms.map((program) => (
+              <li key={program.id} className="py-4 flex items-center gap-4">
+                <div className="text-2xl text-green-500 basis-[10%]">{program.icon}</div>
+                <div className="flex-1">
+                  <h4 className="text-left text-lg font-semibold text-gray-800">
+                    {program.name}
+                  </h4>
+                  <p className="text-left text-gray-600">{program.description}</p>
+                </div>
+                <Button customClass="mt-6 border border-green-500 text-green-500 px-6 py-3 rounded-lg">Learn More</Button>
+                {/* <a
+                  href={program.link}
+                  className="text-green-500 hover:underline font-medium ml-4"
+                >
+                  Learn More
+                </a> */}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <div className="flex justify-center mt-12">
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="px-3 py-2 mx-2 text-green-500 shadow-lg rounded-md"
+          >
+            <FaChevronLeft className='h-[14px]'/>
+          </button>
+
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index}
+              onClick={() => handlePageChange(index + 1)}
+              className={`px-3 rounded-md mx-1 text-sm ${currentPage === index + 1 ? 'bg-green-500 text-white' : 'bg-white text-green-500 shadow-lg'}`}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="shadow-lg px-3 py-2 mx-2 text-green-500 rounded-md"
+          >
+            <FaChevronRight className='h-[14px]'/>
+          </button>
         </div>
       </div>
     </section>

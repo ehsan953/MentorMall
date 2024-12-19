@@ -1,5 +1,5 @@
 import React from "react";
-
+import TestimonialCarousel from "../common/TestimonialCarausel";
 export default function ClientTestimonials() {
   return (
     <section className="max-w-[1400px] mx-auto bg-white p-12 sm:p-16">
@@ -11,6 +11,8 @@ export default function ClientTestimonials() {
           Hear from our happy clients who have achieved success with the help of our mentors and professionals.
         </p>
       </div>
+        <TestimonialCarousel />
+        {/* <div className="bg-green-100 h-48 w-[40%] rounded-lg mt-[-10rem]"></div> */}
     </section>
   );
 }
