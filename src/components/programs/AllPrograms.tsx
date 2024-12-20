@@ -400,7 +400,7 @@ export default function AllPrograms() {
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="px-3 py-2 mx-2 text-green-500 shadow-lg rounded-md"
+            className="px-3 py-2 mx-2 text-gray-400 shadow-lg rounded-md"
           >
             <FaChevronLeft className='h-[14px]'/>
           </button>
@@ -409,7 +409,7 @@ export default function AllPrograms() {
             <button
               key={index}
               onClick={() => handlePageChange(index + 1)}
-              className={`px-3 rounded-md mx-1 text-sm ${currentPage === index + 1 ? 'bg-green-500 text-white' : 'bg-white text-green-500 shadow-lg'}`}
+              className={`px-3 rounded-md mx-1 text-sm ${currentPage === index + 1 ? 'bg-green-500 text-white' : 'bg-white text-gray-700 font-bold shadow-lg'}`}
             >
               {index + 1}
             </button>
@@ -418,7 +418,7 @@ export default function AllPrograms() {
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="shadow-lg px-3 py-2 mx-2 text-green-500 rounded-md"
+            className="shadow-lg px-3 py-2 mx-2 text-gray-400 rounded-md"
           >
             <FaChevronRight className='h-[14px]'/>
           </button>
