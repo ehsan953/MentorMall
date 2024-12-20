@@ -94,3 +94,22 @@ body {
   background-color: #10b981; /* Green color for active dot */
   border: none;
 }
+
+input[type="checkbox"]:checked {
+  background-color: #22c55e; /* Green background */
+  // border-color: #22c55e;    /* Match the accent color */
+  border: none;
+  color: #fff;             /* Ensures the check mark is white */
+  appearance: none;        /* Removes default styling */
+  border-radius: 3px;
+  display: grid;
+  place-content: center;
+  width: 2.6rem;
+  height: 12px;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";           /* Adds a custom check mark */
+  color: #fff;            /* White check mark */
+  font-size: 0.43rem;     /* Adjust size */
+}

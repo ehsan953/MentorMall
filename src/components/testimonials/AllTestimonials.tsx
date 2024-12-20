@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../common/Button";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Hero from "./Hero";
+import { FaChevronLeft, FaChevronRight, FaSearch } from "react-icons/fa";
 const testimonials = [
   {
     id: 1,
@@ -96,6 +97,7 @@ const testimonials = [
 
 export default function AllTestimonials() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState("");
   const testimonialsPerPage = 9;
 
   // Calculate the index of the first and last program for the current page
@@ -115,20 +117,52 @@ export default function AllTestimonials() {
   const handlePageChange = (pageNumber: any) => {
     setCurrentPage(pageNumber);
   };
-
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+  };
   return (
-    <section className="p-8">
-      <div className="max-w-[1400px] mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">
-          Testimonials of Our Clients
-        </h2>
-        <p className="md:w-[70%] mx-auto text-lg text-gray-600 mb-12">
-          Hear from our happy clients who have achieved success with the help of
-          our mentors and professionals.
-        </p>
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold">All Testimonials</h2>
+    <section className="">
+      <Hero />
+      <div className="p-8 max-w-[1400px] mx-auto text-center">
+        <div className="flex flex-wrap gap-4 md:gap-0 justify-between mb-8">
+          <div className="basis-full md:basis-[50%] flex items-center border border-gray-300 rounded-md p-1 bg-white w-96">
+            <div className="p-2 text-gray-500">
+              <FaSearch />
+            </div>
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+              className="outline-none w-full font-normal focus:border-blue-50"
+            />
+          </div>
+          <div className="basis-full sm:basis-[48%] md:basis-[24%] flex items-center border border-gray-300 rounded-md p-1 bg-white w-96">
+            <div className="p-2 text-gray-500">
+              <FaSearch />
+            </div>
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+              className="outline-none w-full font-normal focus:border-blue-50"
+            />
+          </div>
+          <div className="basis-full sm:basis-[48%] md:basis-[24%] flex items-center border border-gray-300 rounded-md p-1 bg-white w-96">
+            <div className="p-2 text-gray-500">
+              <FaSearch />
+            </div>
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+              className="outline-none w-full font-normal focus:border-blue-50"
+            />
+          </div>
         </div>
+        
 
         <div className="flex justify-center">
           {/* {isGrid ? ( */}
@@ -183,7 +217,7 @@ export default function AllTestimonials() {
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="px-3 py-2 mx-2 text-green-500 shadow-lg rounded-md"
+            className="px-3 py-2 mx-2 text-gray-400 shadow-lg rounded-md"
           >
             <FaChevronLeft className="h-[14px]" />
           </button>
@@ -195,7 +229,7 @@ export default function AllTestimonials() {
               className={`px-3 rounded-md mx-1 text-sm ${
                 currentPage === index + 1
                   ? "bg-green-500 text-white"
-                  : "bg-white text-green-500 shadow-lg"
+                  : "bg-white text-gray-700 font-bold shadow-lg"
               }`}
             >
               {index + 1}
@@ -205,7 +239,7 @@ export default function AllTestimonials() {
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="shadow-lg px-3 py-2 mx-2 text-green-500 rounded-md"
+            className="shadow-lg px-3 py-2 mx-2 text-gray-400 rounded-md"
           >
             <FaChevronRight className="h-[14px]" />
           </button>
