@@ -6,6 +6,7 @@ import { MdApps } from "react-icons/md";
 import Button from "../../components/common/Button";
 import { Link } from "react-router-dom";
 import Register from "../signup/register";
+import Login from "../signup/login";
 import Modal from "../common/modal/Modal";
 
 export default function Header() {
@@ -13,8 +14,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+  const [isSigninModalOpen, setIsSigninModalOpen] = useState(false);
   const handleModalClose = () => {
     setIsSignupModalOpen(false);
+    setIsSigninModalOpen(false);
   };
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -67,7 +70,7 @@ export default function Header() {
               />
             </div>
             <div className="flex items-center gap-2">
-              <Button customClass="px-4 py-2 rounded-md text-gray-500 font-medium hover:text-green-500">
+              <Button customClass="px-4 py-2 rounded-md text-gray-500 font-medium hover:text-green-500" onClick={() => setIsSigninModalOpen(true)}>
                 <span>Sign in</span>
               </Button>
               <Button
@@ -85,6 +88,14 @@ export default function Header() {
                 onModalClose={handleModalClose}
               >
                 <Register onClose={handleModalClose} />
+              </Modal>
+            )}
+            {isSigninModalOpen && (
+              <Modal
+                isModalOpen={isSigninModalOpen}
+                onModalClose={handleModalClose}
+              >
+                <Login onClose={handleModalClose} />
               </Modal>
             )}
           </div>
