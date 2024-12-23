@@ -114,16 +114,14 @@ const Register: React.FC<RegisterProps> = ({ onClose }) => {
         </div>
         <div className="flex flex-col flex-1 justify-end">
           <p className="text-sm text-gray-700 font-normal">
-            By joining, you agree to the MentorMall{" "}
+          By signing up, you agree to MentorMall's{" "}
             <a href="/" className="underline">
               Terms of Service
             </a>{" "}
-            and to occasionally receive emails from us. Please read our{" "}
+            and consent to receiving occasional emails from us. For details on how we handle your personal data, please review our{" "}
             <a href="/" className="underline">
               Privacy Policy
-            </a>{" "}
-            to learn how we use your personal data.
-          </p>
+            </a>{" "}.</p>
         </div>
       </div>
     </div>
