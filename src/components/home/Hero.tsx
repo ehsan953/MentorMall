@@ -1,6 +1,12 @@
-import React from "react";
+import { useState } from "react";
 import Button from "../../components/common/Button";
+import Register from "../signup/register";
+import Modal from "../common/modal/Modal";
 export default function Hero() {
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+  const handleModalClose = () => {
+    setIsSignupModalOpen(false);
+  };
   return (
     <div className="bg-cover bg-center h-screen bg-[url('/Hero.webp')] relative">
       <div className="bg-black h-full bg-opacity-50">
@@ -18,10 +24,19 @@ export default function Hero() {
                 looking to learn, teach, or collaborate, we're here to guide you
                 every step of the way.
               </p>
-              <Button customClass="mt-6 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600">
+              <Button customClass="mt-6 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600" onClick={() => setIsSignupModalOpen(true)}>
                 Get Started
               </Button>
+              {isSignupModalOpen && (
+                <Modal
+                  isModalOpen={isSignupModalOpen}
+                  onModalClose={handleModalClose}
+                >
+                  <Register onClose={handleModalClose} />
+                </Modal>
+              )}
             </div>
+            
           </div>
         </div>
       </div>

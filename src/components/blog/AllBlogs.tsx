@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "../common/Button";
-import Hero from "./Hero";
 import { FaChevronLeft, FaChevronRight, FaSearch } from "react-icons/fa";
 const blogs = [
   {
@@ -168,7 +167,7 @@ export default function AllBlogs() {
                         <img
                           src={blog.blogimage}
                           alt={blog.blogtitle}
-                          className="aspect-video"
+                          className="aspect-video rounded-md"
                         />
                       </div>
                     </div>
