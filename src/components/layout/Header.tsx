@@ -7,6 +7,7 @@ import Button from "../../components/common/Button";
 import { Link } from "react-router-dom";
 import Register from "../signup/register";
 import Login from "../signup/login";
+import Contact from "../contact/Contact";
 import Modal from "../common/modal/Modal";
 
 export default function Header() {
@@ -15,9 +16,11 @@ export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
   const [isSigninModalOpen, setIsSigninModalOpen] = useState(false);
+  const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
   const handleModalClose = () => {
     setIsSignupModalOpen(false);
     setIsSigninModalOpen(false);
+    setIsContactUsModalOpen(false);
   };
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -147,16 +150,23 @@ export default function Header() {
                   >
                     About us
                   </Link>
-                  <Link
-                    to="/contact"
-                    onClick={closeDropdown}
-                    className="block px-4 py-2 hover:bg-gray-200"
+                  <a
+                    onClick={() => setIsContactUsModalOpen(true)}
+                    className="block px-4 py-2 hover:bg-gray-200 cursor-pointer"
                   >
                     Contact us
-                  </Link>
+                  </a>
                 </div>
               )}
             </div>
+            {isContactUsModalOpen && (
+              <Modal
+                isModalOpen={isContactUsModalOpen}
+                onModalClose={handleModalClose}
+              >
+                <Contact onClose={handleModalClose} />
+              </Modal>
+            )}
             <div className="relative">
               <button
                 onClick={() => toggleDropdown("learn")}
@@ -298,16 +308,23 @@ export default function Header() {
                     >
                       About Us
                     </Link>
-                    <Link
-                      to="/contact"
-                      onClick={closeDropdown}
-                      className="block px-4 py-2 hover:bg-gray-200"
+                    <a
+                      onClick={() => setIsContactUsModalOpen(true)}
+                      className="block px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
                     >
                       Contact Us
-                    </Link>
+                    </a>
                   </div>
                 )}
               </div>
+              {isContactUsModalOpen && (
+                <Modal
+                  isModalOpen={isContactUsModalOpen}
+                  onModalClose={handleModalClose}
+                >
+                  <Contact onClose={handleModalClose} />
+                </Modal>
+              )}
               <div className="relative">
                 <button
                   onClick={() => toggleDropdown("learn")}

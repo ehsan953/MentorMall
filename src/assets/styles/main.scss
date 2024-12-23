@@ -7,6 +7,13 @@ body {
   font-family: "Lora", serif;
   font-style: normal;
 }
+.custom-scroll::-webkit-scrollbar {
+  width: 7px; /* Adjust the scrollbar width */
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #22C55E;
+  border-radius: 5px; /* Optional: Change color on hover */
+}
 // remove all the styles to startover
 .row {
   display: flex;
