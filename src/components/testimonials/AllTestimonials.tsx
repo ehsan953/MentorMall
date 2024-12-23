@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "../common/Button";
-import Hero from "./Hero";
 import { FaChevronLeft, FaChevronRight, FaSearch } from "react-icons/fa";
 const testimonials = [
   {
@@ -122,7 +121,6 @@ export default function AllTestimonials() {
   };
   return (
     <section className="">
-      <Hero />
       <div className="p-8 max-w-[1400px] mx-auto text-center">
         <div className="flex flex-wrap gap-4 md:gap-0 justify-between mb-8">
           <div className="basis-full md:basis-[50%] flex items-center border border-gray-300 rounded-md p-1 bg-white w-96">
