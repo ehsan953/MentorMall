@@ -2,7 +2,6 @@ import Layout from "@/components/layout";
 import Counter from "@/pages/Counter";
 import About from "@/pages/About";
 import Blog from "@/pages/Blog";
-import Contact from "@/pages/Contact";
 import Membership from "@/pages/Membership";
 import Testimonial from "@/pages/Testimonial";
 import Courses from "@/pages/Courses";
@@ -35,10 +34,6 @@ export const routes = Router([
       {
         path: "/blog",
         element: <Blog />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
       },
       {
         path: "/membership",
