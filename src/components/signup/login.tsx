@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Modal from "../common/modal/Modal";
+import Register from "./register";
 // import { MdArrowForward, MdArrowBack } from "react-icons/md";
 
 interface RegisterProps {
@@ -6,7 +8,10 @@ interface RegisterProps {
 }
 
 const Login: React.FC<RegisterProps> = ({ onClose }) => {
-
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+  const handleModalClose = () => {
+    setIsSignupModalOpen(false);
+  };
   return (
     <div className="sm:w-[500px] h-[600px] lg:w-[875px] lg:h-[645px] flex">
       <div className="hidden lg:block basis-1/2 bg-green-500">
@@ -22,8 +27,16 @@ const Login: React.FC<RegisterProps> = ({ onClose }) => {
                 Sign in to your account
             </h4>
             <p className="font-normal text-gray-700 pt-2 text-[16px] leading-[24px]">
-                Don’t have an account? <a href="" className="underline">Join here</a>
+                Don’t have an account? <a className="underline cursor-pointer" onClick={() => setIsSignupModalOpen(true)}>Join here</a>
             </p>
+            {isSignupModalOpen && (
+                <Modal
+                  isModalOpen={isSignupModalOpen}
+                  onModalClose={handleModalClose}
+                >
+                  <Register onClose={handleModalClose} />
+                </Modal>
+              )}
           </div>
           <div className="border border-gray-200 px-6 py-4">
             
