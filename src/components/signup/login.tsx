@@ -14,7 +14,7 @@ const Login: React.FC<RegisterProps> = ({ onClose }) => {
   };
   return (
     <div className="sm:w-[500px] h-[600px] lg:w-[875px] lg:h-[645px] flex">
-      <div className="hidden lg:block basis-1/2 bg-green-500">
+      <div className="hidden lg:block basis-1/2">
         <img src="/signup2.webp" alt="" className="h-full" />
       </div>
       <div className="flex flex-col basis-full lg:basis-1/2 pt-6 pb-8 px-10">
