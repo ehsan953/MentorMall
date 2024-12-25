@@ -9,7 +9,7 @@ export default function Hero() {
             <div className=" text-white">
               {/* <h1 className="text-4xl md:text-5xl font-bold">Unlock Your Potential With Expert Mentorship.</h1> */}
               <h1 className="font-lora text-[36px] md:text-[48px] font-bold leading-[45px] md:leading-[56px]">
-              Empower Your Journey with Expert Mentorship and Professional Support.
+              Achieve More with the Right Mentor or Professional.
               </h1>
               <p className="mt-4 text-xl">
                 
