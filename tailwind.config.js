@@ -14,6 +14,8 @@ export default {
     },
     extend: {
       colors: {
+
+        green100: '#DCFCE7',
         green500: '#22C55E',
         green800: '#166534',
         green900: '#14532D',
