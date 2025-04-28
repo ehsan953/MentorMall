@@ -432,7 +432,7 @@ export default function Header() {
         <div className="flex items-center px-2 lg:order-1">
           <a href="/">
             <img
-              src="/MentorMall-logo-transparent.png"
+              src="/MentorMall-logo-22C55E.png"
               alt=""
               className="w-[130px] lg:w-[180px]"
             />
