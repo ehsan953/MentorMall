@@ -8,6 +8,7 @@ import Courses from "@/pages/Courses";
 import Store from "@/pages/Store";
 import Home from "@/pages/Home";
 import Programs from "@/pages/Programs"
+import ProductDetail from "@/pages/ProductDetails"
 import { createBrowserRouter as Router } from "react-router-dom";
 
 export const routes = Router([
@@ -50,6 +51,10 @@ export const routes = Router([
       {
         path: "/store",
         element: <Store />,
+      },
+      {
+        path: "/product/:id",
+        element: <ProductDetail />,
       },
       {
         path: "/programs",

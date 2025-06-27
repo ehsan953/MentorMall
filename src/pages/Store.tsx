@@ -1,7 +1,11 @@
 import React from 'react'
-
-export default function Store() {
+import Hero from '@/components/store/Hero'
+import AllProducts from '@/components/store/AllProducts'
+export default function Blog() {
   return (
-    <div>Store Page</div>
+    <>
+      <Hero/>
+      <AllProducts/>
+    </>
   )
 }
