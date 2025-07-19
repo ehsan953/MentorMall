@@ -181,7 +181,7 @@ export default function AllProducts() {
                         <h3 className="text-lg font-bold text-gray-800 mb-2">{product.name}</h3>
                         <div className="flex justify-between items-center text-green-600 font-semibold mb-2">
                             <span>{product.price}</span>
-                            <button className="text-sm bg-green-500 text-white px-3 py-1 rounded">Add to Cart</button>
+                            <button className="text-sm bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Add to Cart</button>
                         </div>
                         <p className="text-gray-600 text-sm">{product.description}</p>
                     </div>
@@ -200,7 +200,7 @@ export default function AllProducts() {
                             <p className="text-gray-600 text-sm">{product.description}</p>
                             <div className="flex justify-between mt-2 items-center">
                                 <span className="text-green-600 font-bold">{product.price}</span>
-                                <button className="bg-green-500 text-white text-sm px-4 py-1 rounded">Add to Cart</button>
+                                <button className="bg-green-500 text-white text-sm px-4 py-1 rounded hover:bg-green-600">Add to Cart</button>
                             </div>
                         </div>
                     </li>

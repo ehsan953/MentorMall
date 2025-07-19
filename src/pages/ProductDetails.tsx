@@ -82,7 +82,7 @@ export default function ProductDetails() {
           {/* Buttons */}
           <div className="flex gap-4 mb-8">
             <button className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition">Add to Cart</button>
-            <button className="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-900 transition">Buy Now</button>
+            <button className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-gray-900 transition">Buy Now</button>
           </div>
 
           {/* Description */}

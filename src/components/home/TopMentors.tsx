@@ -5,28 +5,28 @@ const mentors = [
     id: 1,
     name: 'Ehsan',
     role: 'Development Lead',
-    image: '/Mentor2.JPG', // Replace with actual image path
+    image: '/mentor-ehsan2.png', // Replace with actual image path
     link: '#mentor1'
   },
   {
     id: 2,
     name: 'Jane Smith',
     role: 'Marketing Specialist',
-    image: '/Hero.webp', // Replace with actual image path
+    image: '/mentor-ehsan2.png', // Replace with actual image path
     link: '#mentor2'
   },
   {
     id: 3,
     name: 'David Lee',
     role: 'Life Coach & Motivational Speaker',
-    image: '/Mentor3.JPG', // Replace with actual image path
+    image: '/mentor-ehsan2.png', // Replace with actual image path
     link: '#mentor3'
   },
   {
     id: 4,
     name: 'Emily Roberts',
     role: 'Career Development Coach',
-    image: '/Mentor1.JPG', // Replace with actual image path
+    image: '/mentor-ehsan2.png', // Replace with actual image path
     link: '#mentor4'
   }
 ];
@@ -42,7 +42,7 @@ export default function TopMentors() {
             {mentors.map((mentor) => (
                 <div key={mentor.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
                   <div className='overflow-hidden'>
-                    <img src={mentor.image} alt={mentor.name} className="w-full aspect-[6/7] object-cover hover:scale-110 transform transition-all duration-700"/>
+                    <img src={mentor.image} alt={mentor.name} className="w-full aspect-[5/7] object-cover hover:scale-110 transform transition-all duration-700"/>
                   </div>
                 <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-800">{mentor.name}</h3>

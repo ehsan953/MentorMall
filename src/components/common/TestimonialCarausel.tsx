@@ -8,7 +8,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const TestimonialCarousel = () => {
   const testimonials = [
     {
-      image: "/Mentor1.JPG",
+      image: "/mentor-ehsan.png",
       name: "John Doe",
       feedback: "This platform is amazing! It helped me achieve my goals.",
       designation: "Business Owner",

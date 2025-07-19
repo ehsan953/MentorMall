@@ -60,7 +60,7 @@ export default function Header() {
       <div className="flex items-center justify-between gap-6 py-2 lg:py-4 px-6 font-bold text-[18px] w-full">
         <div className="hidden lg:flex lg:flex-col gap-2 w-full lg:order-2">
           <div className="flex justify-between items-center">
-            <div className="flex items-center border border-gray-300 rounded-md p-1 bg-white w-96">
+            {/* <div className="flex items-center border border-gray-300 rounded-md p-1 bg-white w-96">
               <div className="p-2 text-gray-500">
                 <FaSearch />
               </div>
@@ -71,39 +71,8 @@ export default function Header() {
                 onChange={handleSearchChange}
                 className="outline-none w-full font-normal focus:border-blue-50"
               />
-            </div>
-            <div className="flex items-center gap-2">
-              <Button customClass="px-4 py-2 rounded-md text-gray-500 font-medium hover:text-green-500" onClick={() => setIsSigninModalOpen(true)}>
-                <span>Sign in</span>
-              </Button>
-              <Button
-                customClass="px-4 py-2 text-sm rounded-md border border-green-500 hover:bg-green-500 text-green-500 hover:text-white"
-                onClick={() => setIsSignupModalOpen(true)}
-              >
-                <span>Join</span>
-              </Button>
-              {/* <FaBell className="text-2xl cursor-pointer text-gray-500" />
-              <FaUser className="text-2xl cursor-pointer text-gray-500" /> */}
-            </div>
-            {isSignupModalOpen && (
-              <Modal
-                isModalOpen={isSignupModalOpen}
-                onModalClose={handleModalClose}
-              >
-                <Register onClose={handleModalClose} />
-              </Modal>
-            )}
-            {isSigninModalOpen && (
-              <Modal
-                isModalOpen={isSigninModalOpen}
-                onModalClose={handleModalClose}
-              >
-                <Login onClose={handleModalClose} />
-              </Modal>
-            )}
-          </div>
-
-          {/* Navigation Dropdowns */}
+            </div> */}
+            {/* Navigation Dropdowns */}
           <div
             className="gap-2 text-[#595459] text-[14px] font-normal flex flex-col lg:flex-row"
             ref={dropdownRef}
@@ -252,13 +221,45 @@ export default function Header() {
             </div>
             {/* Add other dropdowns here */}
           </div>
+            <div className="flex items-center gap-2">
+              <Button customClass="px-4 py-2 rounded-md text-gray-500 font-medium hover:text-green-500" onClick={() => setIsSigninModalOpen(true)}>
+                <span>Sign in</span>
+              </Button>
+              <Button
+                customClass="px-4 py-2 text-sm rounded-md border border-green-500 hover:bg-green-500 text-green-500 hover:text-white"
+                onClick={() => setIsSignupModalOpen(true)}
+              >
+                <span>Join</span>
+              </Button>
+              {/* <FaBell className="text-2xl cursor-pointer text-gray-500" />
+              <FaUser className="text-2xl cursor-pointer text-gray-500" /> */}
+            </div>
+            {isSignupModalOpen && (
+              <Modal
+                isModalOpen={isSignupModalOpen}
+                onModalClose={handleModalClose}
+              >
+                <Register onClose={handleModalClose} />
+              </Modal>
+            )}
+            {isSigninModalOpen && (
+              <Modal
+                isModalOpen={isSigninModalOpen}
+                onModalClose={handleModalClose}
+              >
+                <Login onClose={handleModalClose} />
+              </Modal>
+            )}
+          </div>
+
+          
         </div>
 
         {/* Mobile Menu */}
         <div className="lg:hidden flex gap-2 relative text-[#595459] text-[14px] font-normal">
-          <div className="text-gray-500">
+          {/* <div className="text-gray-500">
             <FaSearch className="w-[24px] h-[24px]" />
-          </div>
+          </div> */}
           <div className="text-gray-500 relative" onClick={toggleMenu}>
             <MdApps className="w-[24px] h-[24px] cursor-pointer" />
           </div>
@@ -432,7 +433,8 @@ export default function Header() {
         <div className="flex items-center px-2 lg:order-1">
           <a href="/">
             <img
-              src="/MentorMall-logo-22C55E.png"
+              src="/text-logo-cap.png"
+              // src="/text-logo-cap-full2.png"
               alt=""
               className="w-[130px] lg:w-[180px]"
             />
