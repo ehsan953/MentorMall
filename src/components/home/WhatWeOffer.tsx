@@ -69,7 +69,7 @@ export default function WhatWeOffer() {
             </div>
             </div>
 
-            <Link to="/programs" className="block px-4 py-2">
+            <Link to="/programs" className="px-4 py-2">
                 <Button customClass="mt-6 bg-green-500 text-white px-6 py-3 rounded-lg">View All Programs</Button>
             </Link>
         </div>
