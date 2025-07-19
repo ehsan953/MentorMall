@@ -3,7 +3,7 @@ import Button from "../../components/common/Button";
 export default function Hero() {
   return (
     <div className="bg-cover bg-center h-[80vh] bg-[url('/testimonial-hero.webp')] relative">
-      <div className="bg-black h-full bg-opacity-50">
+      <div className="bg-black h-full bg-opacity-60">
         <div className="flex items-center justify-center h-full bg-gradient-to-b from-transparent to-[#045578] from-[65%] to-[115%] opacity-97">
           <div className="w-[80%] md:w-[70%] xl:w-[60%] 2xl:w-[50%]">
             <div className="text-center text-white">

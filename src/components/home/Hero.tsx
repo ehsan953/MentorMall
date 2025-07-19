@@ -9,7 +9,7 @@ export default function Hero() {
   };
   return (
     <div className="bg-cover bg-center h-[87vh] bg-[url('/Hero.webp')] relative">
-      <div className="bg-black h-full bg-opacity-20">
+      <div className="bg-black h-full bg-opacity-50">
       {/* to-[#045578] */}
         <div className="flex items-center justify-center h-full bg-gradient-to-b from-transparent to-[#03511e] from-[65%] to-[115%] opacity-97">
           <div className="w-[80%] md:w-[60%] lg:w-[50%]">

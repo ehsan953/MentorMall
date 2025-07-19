@@ -79,7 +79,7 @@ export default function About() {
           <h3 className="font-medium text-3xl font-lora mb-4 text-gray-800">MentorMall Team</h3>
           <div className="py-4">
             <div className="grid gap-2 grid-cols-12 border border-gray-300 p-4 my-10">
-              <div className="col-span-12 md:col-span-2"><img src="/Mentor2.JPG" alt="" /></div>
+              <div className="col-span-12 md:col-span-2"><img src="/mentor-ehsan2.png" alt="" className="w-full aspect-[5/6] object-cover" /></div>
               <div className="col-span-12 md:col-span-10 p-3">
                 <h3 className="text-3xl font-medium text-gray-600 mb-2 font-lora">Muhammad Ehsan | Visionary and Cofounder</h3>
                 <p className="text-gray-700">The man behind the vision. A chiropractor, traditional acupuncturist, philosopher, and martial artist, John created the BodyTalk and MindScape systems and cofounded the IBA. He also developed the Veltheim Method of Lymphatic Drainage. John wrote nine books on Acupuncture, Reiki, and BodyTalk. His accolades included developing the curriculum as Principal of the Brisbane College of Acupuncture and Natural Therapies and serving as Chairman of the Federation of Australian Acupuncture Colleges. John was a strong and bold leader but with the biggest heart you'd ever find. We’ve all deeply missed him since his passing in 2022 but still consider him the heart of our team.</p>
@@ -90,10 +90,10 @@ export default function About() {
                 <h3 className="text-3xl font-medium text-gray-600 mb-2 font-lora">Muhammad Ehsan | Cofounder</h3>
                 <p className="text-gray-700">Esther created the BreakThrough System and cofounded the IBA. She’s traveled globally since her teens and now generally resides somewhere in Europe. Esther teaches interactive workshops, trains Instructors, and offers private, online sessions, all in BreakThrough. She is author of Beyond Concepts: The Investigation of Who You Are Not and Who Am I? The Seeker’s Guide to Nowhere. A mentor to many, she has a gift for finding the best quotes that speak to the gentleness and understanding we must have toward our human journey, like "You need not push life about." ~Sri Nisargadatta Maharaj</p>
               </div>
-              <div className="col-span-12 md:col-span-2"><img src="/Mentor1.JPG" alt="" /></div>
+              <div className="col-span-12 md:col-span-2"><img src="/mentor-ehsan2.png" alt="" className="w-full aspect-[5/6] object-cover" /></div>
             </div>
             <div className="grid gap-2 grid-cols-12 border border-gray-300 p-4 my-10">
-              <div className="col-span-12 md:col-span-2"><img src="/Hero.webp" alt="" /></div>
+              <div className="col-span-12 md:col-span-2"><img src="/mentor-ehsan2.png" alt="" className="w-full aspect-[5/6] object-cover" /></div>
               <div className="col-span-12 md:col-span-10 p-3">
                 <h3 className="text-3xl font-medium text-gray-600 mb-2 font-lora">Muhammad Ehsan | Finances</h3>
                 <p className="text-gray-700">If it's related to finances, legal matters, contracts, agreements—you know, all the serious stuff—Karen will handle it with firmness and fairness. Despite her savvy business sense, you will find nothing but a soft and compassionate center.</p>
@@ -104,10 +104,10 @@ export default function About() {
                 <h3 className="text-3xl font-medium text-gray-600 mb-2 font-lora">Muhammad Ehsan | Projects</h3>
                 <p className="text-gray-700">A jack of all trades, Alex has his hands in every pot, although his focus is always on developing and growing the business. He oversees all major projects and handles all our filming and video editing. He has a knack for lightening the mood in any room and inducing bouts of laughter.</p>
               </div>
-              <div className="col-span-12 md:col-span-2"><img src="/Mentor3.JPG" alt="" /></div>
+              <div className="col-span-12 md:col-span-2"><img src="/mentor-ehsan2.png" alt="" className="w-full aspect-[5/6] object-cover" /></div>
             </div>
             <div className="grid gap-2 grid-cols-12 border border-gray-300 p-4 my-10">
-              <div className="col-span-12 md:col-span-2"><img src="/Mentor1.JPG" alt="" /></div>
+              <div className="col-span-12 md:col-span-2"><img src="/mentor-ehsan2.png" alt="" className="w-full aspect-[5/6] object-cover"/></div>
               <div className="col-span-12 md:col-span-10 p-3">
                 <h3 className="text-3xl font-medium text-gray-600 mb-2 font-lora">Muhammad Ehsan | Member Support</h3>
                 <p className="text-gray-700">Being a membership-based organization, Dawn makes Members her number one-priority. In addition to handling accounting and balancing the books, Dawn is the one who handles all your worries without ever losing her smile, patience and positive attitude.</p>
@@ -118,10 +118,10 @@ export default function About() {
                 <h3 className="text-3xl font-medium text-gray-600 mb-2 font-lora">Muhammad Ehsan | Instructor Support</h3>
                 <p className="text-gray-700">Along with supporting Instructors, Sherry oversees all business policy and procedure, ensuring that our certification and training processes are top notch. Sherry's own experience from the perspective of the client, student, Practitioner and Instructor gives her awesome flexibility in envisioning the bigger picture.</p>
               </div>
-              <div className="col-span-12 md:col-span-2"><img src="/Mentor2.JPG" alt="" /></div>
+              <div className="col-span-12 md:col-span-2"><img src="/mentor-ehsan2.png" alt="" className="w-full aspect-[5/6] object-cover"/></div>
             </div>
             <div className="grid gap-2 grid-cols-12 border border-gray-300 p-4 my-10">
-              <div className="col-span-12 md:col-span-2"><img src="/Mentor1.JPG" alt="" /></div>
+              <div className="col-span-12 md:col-span-2"><img src="/mentor-ehsan2.png" alt="" className="w-full aspect-[5/6] object-cover"/></div>
               <div className="col-span-12 md:col-span-10 p-3">
                 <h3 className="text-3xl font-medium text-gray-600 mb-2 font-lora">Muhammad Ehsan | Communication</h3>
                 <p className="text-gray-700">Whether it's course content, elegant prose in newsletters, carefully worded business emails, or the written words on our website, it has mostly flowed from Miranda's quill. She is also a fastidious organizer and supports the team by keeping projects on task.</p>
