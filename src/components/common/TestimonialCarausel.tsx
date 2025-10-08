@@ -8,7 +8,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const TestimonialCarousel = () => {
   const testimonials = [
     {
-      image: "/mentor-ehsan.png",
+      image: "/default-member.png",
       name: "John Doe",
       feedback: "This platform is amazing! It helped me achieve my goals.",
       designation: "Business Owner",
@@ -16,7 +16,7 @@ const TestimonialCarousel = () => {
       date: "15/12/2024 - 6:15am"
     },
     {
-      image: "/Mentor1.JPG",
+      image: "/default-member.png",
       name: "Jane Smith",
       feedback: "The mentorship I received was life-changing. Highly recommend!",
       designation: "Entrepreneur",
@@ -24,7 +24,7 @@ const TestimonialCarousel = () => {
       date: "15/12/2024 - 6:15am"
     },
     {
-      image: "/Mentor1.JPG",
+      image: "/default-member.png",
       name: "Sam Wilson",
       feedback: "Professional and insightful guidance. Fantastic experience!",
       designation: "Freelancer",
@@ -32,7 +32,7 @@ const TestimonialCarousel = () => {
       date: "15/12/2024 - 6:15am"
     },
     {
-      image: "/Mentor1.JPG",
+      image: "/default-member.png",
       name: "Sam Wilson",
       feedback: "Professional and insightful guidance. Fantastic experience!",
       designation: "Freelancer",
@@ -40,7 +40,7 @@ const TestimonialCarousel = () => {
       date: "15/12/2024 - 6:15am"
     },
     {
-      image: "/Mentor1.JPG",
+      image: "/default-member.png",
       name: "Sam Wilson",
       feedback: "Professional and insightful guidance. Fantastic experience!",
       designation: "Freelancer",
@@ -48,7 +48,7 @@ const TestimonialCarousel = () => {
       date: "15/12/2024 - 6:15am"
     },
     {
-      image: "/Mentor1.JPG",
+      image: "/default-member.png",
       name: "Sam Wilson",
       feedback: "Professional and insightful guidance. Fantastic experience!",
       designation: "Freelancer",
