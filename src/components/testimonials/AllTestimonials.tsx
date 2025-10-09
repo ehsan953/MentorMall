@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight, FaSearch } from "react-icons/fa";
 const testimonials = [
   {
     id: 1,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "John Doe",
     feedback: "This platform is amazing! It helped me achieve my goals.",
     designation: "Business Owner",
@@ -13,7 +13,7 @@ const testimonials = [
   },
   {
     id: 2,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "Jane Smith",
     feedback: "The mentorship I received was life-changing. Highly recommend!",
     designation: "Entrepreneur",
@@ -22,7 +22,7 @@ const testimonials = [
   },
   {
     id: 3,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "Sam Wilson",
     feedback: "Professional and insightful guidance. Fantastic experience!",
     designation: "Freelancer",
@@ -31,7 +31,7 @@ const testimonials = [
   },
   {
     id: 4,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "Sam Wilson",
     feedback: "Professional and insightful guidance. Fantastic experience!",
     designation: "Freelancer",
@@ -40,7 +40,7 @@ const testimonials = [
   },
   {
     id: 5,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "Sam Wilson",
     feedback: "Professional and insightful guidance. Fantastic experience!",
     designation: "Freelancer",
@@ -49,7 +49,7 @@ const testimonials = [
   },
   {
     id: 6,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "Sam Wilson",
     feedback: "Professional and insightful guidance. Fantastic experience!",
     designation: "Freelancer",
@@ -58,7 +58,7 @@ const testimonials = [
   },
   {
     id: 7,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "Sam Wilson",
     feedback: "Professional and insightful guidance. Fantastic experience!",
     designation: "Freelancer",
@@ -67,7 +67,7 @@ const testimonials = [
   },
   {
     id: 8,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "Sam Wilson",
     feedback: "Professional and insightful guidance. Fantastic experience!",
     designation: "Freelancer",
@@ -76,7 +76,7 @@ const testimonials = [
   },
   {
     id: 9,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "Sam Wilson",
     feedback: "Professional and insightful guidance. Fantastic experience!",
     designation: "Freelancer",
@@ -85,7 +85,7 @@ const testimonials = [
   },
   {
     id: 10,
-    image: "/Mentor1.JPG",
+    image: "/default-member.png",
     name: "Sam Wilson",
     feedback: "Professional and insightful guidance. Fantastic experience!",
     designation: "Freelancer",

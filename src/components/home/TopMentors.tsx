@@ -5,35 +5,35 @@ const mentors = [
     id: 1,
     name: 'Ehsan',
     role: 'Development Lead',
-    image: '/mentor-ehsan2.png', // Replace with actual image path
+    image: '/default-member.png',
     link: '#mentor1'
   },
   {
     id: 2,
     name: 'Jane Smith',
     role: 'Marketing Specialist',
-    image: '/mentor-ehsan2.png', // Replace with actual image path
+    image: '/default-member.png',
     link: '#mentor2'
   },
   {
     id: 3,
     name: 'David Lee',
     role: 'Life Coach & Motivational Speaker',
-    image: '/mentor-ehsan2.png', // Replace with actual image path
+    image: '/default-member.png',
     link: '#mentor3'
   },
   {
     id: 4,
     name: 'Emily Roberts',
     role: 'Career Development Coach',
-    image: '/mentor-ehsan2.png', // Replace with actual image path
+    image: '/default-member.png',
     link: '#mentor4'
   }
 ];
 
 export default function TopMentors() {
   return (
-    <section className="bg-gray-100 p-12 sm:p-16">
+    <section className="p-12 sm:p-16">
       <div className="max-w-[1400px] mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Meet Our Top Mentors</h2>
         <p className="text-lg text-gray-600 mb-12">Our expert mentors are ready to guide you on your journey. Explore their profiles and start learning today.</p>

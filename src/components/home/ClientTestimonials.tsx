@@ -12,7 +12,7 @@ export default function ClientTestimonials() {
         </p>
       </div>
         <TestimonialCarousel />
-        {/* <div className="bg-green-100 h-48 w-[40%] rounded-lg mt-[-10rem]"></div> */}
+        {/* <div className="bg-green-100 h-48 w-[40%] rounded-lg mt-[-10rem] "></div> */}
     </section>
   );
 }

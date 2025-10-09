@@ -434,7 +434,7 @@ export default function Header() {
           <a href="/">
             <img
               src="/text-logo-cap.png"
-              // src="/text-logo-cap-full2.png"
+              // src="/zentra-cropped2.png"
               alt=""
               className="w-[130px] lg:w-[180px]"
             />

@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../../components/common/Button";
 export default function Hero() {
   return (
-    <div className="bg-cover bg-center h-[80vh] bg-[url('/blog-hero-bg.jpg')] relative">
+    <div className="bg-cover bg-center h-[80vh] bg-[url('/blog-bg.jpg')] relative">
       <div className="bg-black h-full bg-opacity-50">
         <div className="flex items-center justify-center h-full bg-gradient-to-b from-transparent to-[#14532D] from-[65%] to-[115%] opacity-97">
           <div className="w-[80%] md:w-[60%] lg:w-[50%]">
