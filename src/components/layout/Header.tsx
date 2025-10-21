@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import { FaBell, FaUser, FaSearch } from "react-icons/fa";
+import { FaBell, FaUser, FaSearch, FaTasks, FaCog, FaSignOutAlt } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
 import { MdApps } from "react-icons/md";
 import Button from "../../components/common/Button";
@@ -23,6 +23,7 @@ export default function Header() {
     setIsContactUsModalOpen(false);
   };
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const userDropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = (dropdown: string) => {
     setOpenDropdown((prevDropdown) =>
@@ -36,10 +37,13 @@ export default function Header() {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
+      const isClickOutsideAll =
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+        !dropdownRef.current.contains(event.target as Node) &&
+        userDropdownRef.current &&
+        !userDropdownRef.current.contains(event.target as Node);
+
+      if (isClickOutsideAll) {
         setOpenDropdown(null);
         setIsMenuOpen(false);
       }
@@ -221,7 +225,7 @@ export default function Header() {
             </div>
             {/* Add other dropdowns here */}
           </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <Button customClass="px-4 py-2 rounded-md text-gray-500 font-medium hover:text-green-500" onClick={() => setIsSigninModalOpen(true)}>
                 <span>Sign in</span>
               </Button>
@@ -233,6 +237,56 @@ export default function Header() {
               </Button>
               {/* <FaBell className="text-2xl cursor-pointer text-gray-500" />
               <FaUser className="text-2xl cursor-pointer text-gray-500" /> */}
+              {/* User Avatar Menu */}
+              <div className="relative" ref={userDropdownRef}>
+                <div
+                  onClick={() => toggleDropdown("user")}
+                  className="flex items-center gap-1 cursor-pointer"
+                >
+                  <img
+                    src="/default-member.png"
+                    alt="User Avatar"
+                    className="w-9 h-9 rounded-full border border-gray-300"
+                  />
+                  {/* <BiChevronDown className="text-gray-600" /> */}
+                </div>
+
+                {openDropdown === "user" && (
+                  <div className="absolute right-0 mt-2 w-44 bg-white shadow-lg rounded-md p-2 z-50">
+                    <Link
+                      to="/profile"
+                      onClick={closeDropdown}
+                      className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md"
+                    >
+                      <FaUser className="text-gray-500" />
+                      Profile
+                    </Link>
+                    <Link
+                      to="/mytasks"
+                      onClick={closeDropdown}
+                      className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md"
+                    >
+                      <FaTasks className="text-gray-500" />
+                      My Tasks
+                    </Link>
+                    <Link
+                      to="/settings"
+                      onClick={closeDropdown}
+                      className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-md"
+                    >
+                      <FaCog className="text-gray-500" />
+                      Settings
+                    </Link>
+                    <button
+                      onClick={() => alert("Logout clicked")}
+                      className="flex items-center gap-3 w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100 rounded-md"
+                    >
+                      <FaSignOutAlt className="text-red-500" />
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
             {isSignupModalOpen && (
               <Modal

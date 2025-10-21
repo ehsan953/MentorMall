@@ -9,6 +9,7 @@ import Store from "@/pages/Store";
 import Home from "@/pages/Home";
 import Programs from "@/pages/Programs"
 import ProductDetail from "@/pages/ProductDetails"
+import MyTasks from "@/pages/MyTasks"
 import { createBrowserRouter as Router } from "react-router-dom";
 
 export const routes = Router([
@@ -59,6 +60,10 @@ export const routes = Router([
       {
         path: "/programs",
         element: <Programs />,
+      },
+      {
+        path: "/mytasks",
+        element: <MyTasks />,
       },
     ],
   },
