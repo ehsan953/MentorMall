@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../components/common/Button';
-
+import Modal from "../common/modal/Modal";
+import Register from "../signup/register";
+import PostTask from "../tasks/PostTask";
 const HireMentorSection = () => {
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+  const [isPostTaskModalOpen, setIsPostTaskModalOpen] = useState(false);
+   const handleModalClose = () => {
+    setIsSignupModalOpen(false);
+    setIsPostTaskModalOpen(false);
+  };
   return (
     <section className="max-w-[1400px] mx-auto bg-gray-50 p-12 sm:p-16">
       <div className="text-center">
@@ -17,17 +25,30 @@ const HireMentorSection = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Post a Task</h3>
             <p className="text-gray-600 mb-6">Describe your project, set a budget, and find the perfect mentor or professional to complete it.</p>
-            <Link to="/post-task">
-              <Button customClass="text-green-500 border border-green-500 hover:bg-green-500 hover:text-white px-6 py-3 rounded-lg">Get Started</Button>
-            </Link>
+            <Button customClass="text-green-500 border border-green-500 hover:bg-green-500 hover:text-white px-6 py-3 rounded-lg" onClick={() => setIsSignupModalOpen(true)}>Get Started</Button>
+            <Button customClass="ml-2 text-green-500 border border-green-500 hover:bg-green-500 hover:text-white px-6 py-3 rounded-lg" onClick={() => setIsPostTaskModalOpen(true)}>Post a Task</Button>
           </div>
+          {isSignupModalOpen && (
+            <Modal
+              isModalOpen={isSignupModalOpen}
+              onModalClose={handleModalClose}
+            >
+              <Register onClose={handleModalClose} />
+            </Modal>
+          )}
+          {isPostTaskModalOpen && (
+            <Modal
+              isModalOpen={isPostTaskModalOpen}
+              onModalClose={handleModalClose}
+            >
+              <PostTask onClose={handleModalClose} />
+            </Modal>
+          )}
 
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Become a Mentor</h3>
             <p className="text-gray-600 mb-6">Join our platform as a mentor and start earning by helping clients achieve their goals.</p>
-            <Link to="/become-mentor">
-              <Button customClass="bg-green-500 text-white px-6 py-3 rounded-lg hover:text-green-500 border hover:bg-white hover:border-green-500">Join as a Mentor</Button>
-            </Link>
+            <Button customClass="bg-green-500 text-white px-6 py-3 rounded-lg hover:text-green-500 border hover:bg-white hover:border-green-500" onClick={() => setIsSignupModalOpen(true)}>Join as a Mentor</Button>
           </div>
         </div>
 
