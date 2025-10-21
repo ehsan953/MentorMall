@@ -7,7 +7,7 @@ import PostTask from "../tasks/PostTask";
 const HireMentorSection = () => {
   const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
   const [isPostTaskModalOpen, setIsPostTaskModalOpen] = useState(false);
-   const handleModalClose = () => {
+  const handleModalClose = () => {
     setIsSignupModalOpen(false);
     setIsPostTaskModalOpen(false);
   };
