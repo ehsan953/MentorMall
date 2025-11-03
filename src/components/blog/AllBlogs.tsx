@@ -141,11 +141,8 @@ export default function AllBlogs() {
             {currentblogs.length > 0 ? (
               <div className="grid grid-cols-1 gap-8">
                 {currentblogs.map((blog) => (
-                  <div>
-                    <div
-                      key={blog.id}
-                      className="grid grid-cols-12 p-4 border rounded shadow-sm transition-shadow"
-                    >
+                  <div key={blog.id} className="p-4 border rounded shadow-sm transition-shadow">
+                    <div className="grid grid-cols-12">
                       <div className="col-span-8 px-3 flex flex-col justify-between">
                         <div>
                           <div className="flex gap-4 mb-4">
